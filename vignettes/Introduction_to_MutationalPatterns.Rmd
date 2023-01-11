@@ -20,7 +20,7 @@ author:
 - name: Mark van Roosmalen
   affiliation:
     - Princess Maxima Center, Utrecht, The Netherlands
-  email: M.J.vanRoosmalen-3@prinsesmaximacentrum.nl
+  email: vanBoxtelBioinformatics@prinsesmaximacentrum.nl
 - name: Ruben van Boxtel
   affiliation:
     - Princess Maxima Center, Utrecht, The Netherlands

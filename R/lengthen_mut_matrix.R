@@ -1,5 +1,5 @@
 #' Lengthen mutation matrix
-#'
+7#'
 #' A mutation_matrix calculated on a GRangesList or GR object modified by 'split_muts_region()',
 #' will contain a column per combination of sample and genomic region. In essence different regions
 #' are treated as different samples. This function will transform the matrix, so that these regions
@@ -79,7 +79,8 @@ lengthen_mut_matrix <- function(mut_matrix) {
   # Determine the new rownames of the mut_mat
   types <- stringr::str_remove(col_names, ".*\\.")
   types_rownames <- rep(types, each = nrow(mut_matrix))
-  new_rownames <- stringr::str_c(rownames(mut_matrix), "_", types_rownames)
+  new_rownames <- paste(rownames(mut_matrix),"_",types_rownames,sep="")
+
 
   # Change shape of mutation matrix to a single column
   dim(mut_matrix) <- c(length(new_rownames), 1)
