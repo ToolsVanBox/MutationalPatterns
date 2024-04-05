@@ -117,6 +117,10 @@
     # Match argument
     method = match.arg(method)
     
+    #Remove NULL values
+    sims <- Filter(Negate(is.null), sims)
+    removed_sigs <- Filter(Negate(is.null), removed_sigs)
+
     # Prepare data
     sims <- sims[!S4Vectors::isEmpty(sims)] %>%
         unlist()
